@@ -4,6 +4,10 @@
 
 - [Requirements Before Starting](#requirements-before-starting)
 - [Installing NGINX](#installing-nginx)
+- [Create an HTML File to Serve](#create-an-html-file-to-serve)
+- [Writing an NGINX Server Block](#writing-an-nginx-server-block)
+
+- **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
 ## Requirements Before Starting
 
@@ -65,6 +69,35 @@ You have now successfully installed NGINX
 	```
 
 You have now successfully created the index.html document
+
+## Writing an NGINX Server Block
+
+1. Create a file with the file name set as the IP address for your DigitalOcean server.
+
+	`touch 137.184.7.84`
+
+2. Add the following contents to the file created in step 1 by using the `vim` tool.
+
+	```
+	server {
+        	listen 80;
+        	listen [::]:80;
+
+        	root /var/www/137.184.7.84/html;
+        	index index.html;
+
+        	server_name 137.184.7.84;
+
+        	location / {
+                	try_files $uri $uri/ =404;
+        	}
+	}	
+	```
+
+- Note: The IP address shown above will be different. Use the IP address for web-one created on DigitalOcean.
+
+You have successfully created the server block for NGINX
+
 
 
 
