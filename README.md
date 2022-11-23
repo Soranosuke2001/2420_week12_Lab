@@ -41,6 +41,30 @@
 
 You have now successfully installed NGINX
 
+## Create an HTML File to Serve
+
+1. Create a "index.html" file by using the command below.
+
+	`touch index.html`
+
+2. Add the following contents inside the HTML file using the `vim` tool.
+
+	```
+	<!DOCTYPE html>
+	<html lang="en">
+	<html>
+    		<head>
+			<meta charset="UTF-8" />
+        		<title>Example Site for 2420</title>
+    		</head>
+    		<body>
+        		<h1>Success!</h1>
+        		<h2 style="color: red;">All your internets are belong to us!</h2>
+    		</body>
+	</html>
+	```
+
+You have now successfully created the index.html document
 
 
 
