@@ -9,6 +9,8 @@
 - [Moving Files to web-one](#moving-files-to-web-one)
 - [Restart NGINX](#restart-nginx)
 - [Check The IP Address in Browser](#check-the-ip-address-in-browser)
+- [Setting Up Firewall Using UFW](#setting-up-firewall-using-ufw)
+- [Testing Firewall] (#testing-firewall)
 
 - **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
@@ -218,4 +220,16 @@ You have successfully served the index.html file
 ![ufw status after enabled](images/ss13.png)
 
 You have successfully created the firewall using UFW
+
+## Testing Firewall
+
+1. Try accessing "web-one" server using SSH from your local terminal. You should still be able to access the server.
+
+![accessing web-one after firewall enabled](images/ss14.png)
+
+2. Try accessing the HTML file being served by searching the IP address of "web-one". The same webpage should be displayed when we accessed the webpage earlier in the Lab.
+
+![accessing webpage after firewall enabled](images/ss15.png)
+
+You have successfully enabled the Firewall
 
