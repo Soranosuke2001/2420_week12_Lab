@@ -72,11 +72,12 @@ You have now successfully installed NGINX
 	<html>
     		<head>
 			<meta charset="UTF-8" />
-        		<title>Example Site for 2420</title>
+        		<title>ACIT 2420 Week 12 Lab</title>
     		</head>
     		<body>
-        		<h1>Success!</h1>
-        		<h2 style="color: red;">All your internets are belong to us!</h2>
+        		<h1>Welcome to Sora and Frank's website</h1>
+			<p>You have successfully served the correct index.html page</p>
+        		<p>Feel free to add more contents to this page to personalize it!</p>
     		</body>
 	</html>
 	```
