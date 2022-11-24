@@ -39,7 +39,7 @@ Created By: Frank Zhu and Sora Schlegel
 	`sudo apt update`
 
 	`sudo apt upgrade`
-![](images/sss1.png)
+![NGINX install progress](images/sss1.png)
 - Note: when prompted by the image above just hit the `Enter` key.
 
 2. To install NGINX, use the command below.
