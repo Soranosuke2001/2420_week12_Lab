@@ -14,6 +14,8 @@
 
 - **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
+---
+
 ## Requirements Before Starting
 
 - Note: Before beginning this lab, you must create a new server with the hostname set to "web-one" on DigitalOcean.
@@ -25,6 +27,8 @@
 3. Create a new user on "web-one".
 
 4. Disable login as the root user.
+
+---
 
 ## Installing NGINX
 
@@ -50,6 +54,8 @@
 
 You have now successfully installed NGINX
 
+---
+
 ## Create an HTML File to Serve
 
 1. Create a "index.html" file by using the command below.
@@ -74,6 +80,8 @@ You have now successfully installed NGINX
 	```
 
 You have now successfully created the index.html document
+
+---
 
 ## Writing an NGINX Server Block
 
@@ -102,6 +110,8 @@ You have now successfully created the index.html document
 - Note: The IP address shown above will be different. Use the IP address for web-one created on DigitalOcean.
 
 You have successfully created the server block for NGINX
+
+---
 
 ## Moving Files to web-one
 
@@ -161,6 +171,8 @@ You have successfully created the server block for NGINX
 
 You have successfully setup the proper configuration for nginx
 
+---
+
 ## Restart NGINX
 
 1. Use the command below to restart the nginx service.
@@ -177,6 +189,8 @@ You have successfully setup the proper configuration for nginx
 
 You ave successfully restarted the nginx service
 
+---
+
 ## Check The IP Address in Browser
 
 1. Copy the IP address to "web-one" server
@@ -188,6 +202,8 @@ You ave successfully restarted the nginx service
 ![Webpage being served](images/ss9.png)
 
 You have successfully served the index.html file
+
+---
 
 ## Setting Up Firewall Using UFW
 
@@ -220,6 +236,8 @@ You have successfully served the index.html file
 ![ufw status after enabled](images/ss13.png)
 
 You have successfully created the firewall using UFW
+
+---
 
 ## Testing Firewall
 
