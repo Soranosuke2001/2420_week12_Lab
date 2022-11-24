@@ -130,7 +130,7 @@ You have successfully created the server block for NGINX
 
 ![using the above commands](images/ss3.png)
 
-3. Use the `sftp` command to copy the files.
+3. From your local terminal use the `sftp` command to copy the files.
 
 4. Copy the `index.html` and `137.184.7.84` file to the home directory of your web-one user by using the commad below.
 
