@@ -8,6 +8,7 @@
 - [Writing an NGINX Server Block](#writing-an-nginx-server-block)
 - [Moving Files to web-one](#moving-files-to-web-one)
 - [Restart NGINX](#restart-nginx)
+- [Check The IP Address in Browser](#check-the-ip-address-in-browser)
 
 - **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
@@ -185,4 +186,36 @@ You ave successfully restarted the nginx service
 ![Webpage being served](images/ss9.png)
 
 You have successfully served the index.html file
+
+## Setting Up Firewall Using UFW
+
+1. Check if UFW is enabled by using the command below.
+
+	`sudo ufw status`
+
+![ufw status](images/ss10.png)
+
+2. Enable SSH and HTTP connections by using the command below.
+
+	`sudo ufw allow ssh`
+
+	`sudo ufw allow http`
+
+![enabling ssh and http](images/ss11.png)
+
+- Note: Since I have already enabled ssh and http, the output after running the command will be different in your case.
+
+3. Enable to the UFW Firewall by using the command below.
+
+	`sudo ufw enable`
+
+![enabled ufw](images/ss12.png)
+
+4. Check the list of rules by using the command below.
+
+	`sudo ufw status`
+
+![ufw status after enabled](images/ss13.png)
+
+You have successfully created the firewall using UFW
 
