@@ -6,6 +6,7 @@
 - [Installing NGINX](#installing-nginx)
 - [Create an HTML File to Serve](#create-an-html-file-to-serve)
 - [Writing an NGINX Server Block](#writing-an-nginx-server-block)
+- [Moving Files to web-one](#moving-files-to-web-one)
 
 - **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
@@ -98,6 +99,63 @@ You have now successfully created the index.html document
 
 You have successfully created the server block for NGINX
 
+## Moving Files to web-one
+
+1. On your local terminal, change the directory to the folder that contains the files we created in step 2 and 3.
+
+2. Create the `/var/www/137.184.7.84/html` directory on "web-one" by using the commands below.
+
+	`cd /var/www`
+
+	`sudo mkdir -p 137.184.7.84/html`
+
+![using the above commands](images/ss3.png)
+
+3. Use the `sftp` command to copy the files.
+
+4. Copy the `index.html` and `137.184.7.84` file to the home directory of your web-one user by using the commad below.
+
+- Note: The IP address for web-one will be the folder name inside the `/var/www` directory.
+
+	`sftp -i ~/.ssh/DO_webone_key sora-web@137.184.7.84`
+
+	`put index.html`
+
+	`put 137.184.7.84`
+
+- Note: You can verify that the file was successfully copied by checking the directory in "web-one"
+
+![After running the commands above](images/ss4.png)
+
+5. SSH into web-one and move the copied HTML file to the `/var/www/137.184.7.84/html` directory by using the command below.
+
+	`sudo cp ./index.html /var/www/137.184.7.84/html`
+
+- Note: Verify that the file exists in the directory by using the `ls` command.
+
+![after running the command above](images/ss5.png)
+
+6. Copy the `137.184.7.84` file to the `/etc/nginx/sites-available` directory.
+
+	`sudo cp ./137.184.7.84 /etc/nginx/sites-available`
+
+- Note: You can verify that the file was successfully copied by checking the directory in "web-one"
+
+![after running the command above](images/ss6.png)
+
+7. Create a soft link to the new server block by using the command below.
+
+	`sudo ln -s /etc/nginx/sites-available/137.184.7.84 /etc/nginx/sites-enabled/`
+
+8. Test your nginx configuration by using the command below.
+
+	`sudo nginx -t`
+
+- Note: If successful, you should have a similar output to the screen shot below.
+
+![Successful nginx configuration](images/ss7.png)
+
+You have successfully setup the proper configuration for nginx
 
 
 
