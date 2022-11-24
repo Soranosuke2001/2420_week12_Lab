@@ -7,6 +7,7 @@
 - [Create an HTML File to Serve](#create-an-html-file-to-serve)
 - [Writing an NGINX Server Block](#writing-an-nginx-server-block)
 - [Moving Files to web-one](#moving-files-to-web-one)
+- [Restart NGINX](#restart-nginx)
 
 - **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
@@ -156,6 +157,22 @@ You have successfully created the server block for NGINX
 ![Successful nginx configuration](images/ss7.png)
 
 You have successfully setup the proper configuration for nginx
+
+## Restart NGINX
+
+1. Use the command below to restart the nginx service.
+
+	`sudo systemctl restart nginx`
+
+- Note: There wont be any outputs to this command.
+
+2. Verify that the restart was successful by using the command below.
+
+	`sudo systemctl status nginx`
+
+![nginx status](images/ss8.png)
+
+You ave successfully restarted the nginx service
 
 
 
