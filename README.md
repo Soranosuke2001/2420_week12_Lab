@@ -174,5 +174,15 @@ You have successfully setup the proper configuration for nginx
 
 You ave successfully restarted the nginx service
 
+## Check The IP Address in Browser
 
+1. Copy the IP address to "web-one" server
+
+2. Paste it in the browser.
+
+- Note: If done correctly, the webpage being served should look similar to the screen shot below.
+
+![Webpage being served](images/ss9.png)
+
+You have successfully served the index.html file
 
