@@ -10,7 +10,7 @@
 - [Restart NGINX](#restart-nginx)
 - [Check The IP Address in Browser](#check-the-ip-address-in-browser)
 - [Setting Up Firewall Using UFW](#setting-up-firewall-using-ufw)
-- [Testing Firewall] (#testing-firewall)
+- [Testing Firewall](#testing-firewall)
 
 - **Note Before Starting:** We will be creating the files using WSL then transfering the files to "web-one". Where the files are created does not matter currently, but when transfering the files, this will matter.
 
